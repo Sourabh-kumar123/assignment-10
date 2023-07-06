@@ -1,0 +1,151 @@
+ANSWER 1:-
+In Python, a lambda function, also known as an anonymous function, is a small and concise function that can be defined without a function name. 
+It is created using the lambda keyword, followed by a list of parameters, a colon (:), and an expression. 
+The result of the expression is automatically returned by the lambda function.
+
+
+
+ANSWER 2:-
+the answer is yes in this way we can do this
+a=lambda x,y:x+y
+print(lambda(a))
+ANSWER 3:-
+Lambda functions in Python are commonly used in situations where a small, anonymous function is needed. They are especially useful in functional programming, where functions are treated as
+first-class objects and can be passed as arguments or returned as values from other functions.
+
+students = [('Alice', 95), ('Bob', 80), ('Charlie', 90)]
+
+students_sorted = sorted(students, key=lambda x: x[1])
+
+print(students_sorted)
+
+
+
+ANSWER 4:-
+Advantages of Lambda Functions:
+Lambda functions are anonymous, meaning they don't require a separate name. This makes them useful for situations where a function is 
+only needed in a specific context or as an argument to another function.
+Lambda functions are treated as first-class objects in Python, which means they can be assigned to variables,
+passed as arguments to other functions, and returned as values. 
+
+limitations :-
+Lambda functions are limited to a single expression. They cannot contain multiple statements or complex logic like regular functions can
+lambda functions are best suited for simple operations. For more complex tasks requiring control flow, error handling, or extensive computations,
+regular functions provide a more comprehensive and flexible solution.
+
+
+
+ANSWER 5:-
+Yes, lambda functions in Python can access variables defined outside of their own scope. However, the accessibility of these variables depends 
+on whether they are defined in the enclosing function's scope or in the global scope.
+def outer_function(x):
+    y = 10
+    return lambda z: x + y + z
+
+result = outer_function(5)
+print(result(3))
+
+
+ANSWER 6:-
+square = lambda x: x ** 2
+result = square(5)
+print(result)
+
+
+
+ANSWER 7:-
+find_max = lambda lst: max(lst)
+numbers = [10, 5, 8, 20, 15]
+result = find_max(numbers)
+print(result)
+
+
+ANSWER 8:-
+filter_even = lambda lst: list(filter(lambda x: x % 2 == 0, lst))
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = filter_even(numbers)
+print(result)
+
+
+ANSWER 9:-
+sort_by_length = lambda lst: sorted(lst, key=lambda x: (len(x), x))
+strings = ["zebra", "apple", "banana", "cat", "dog"]
+result = sort_by_length(strings)
+print(result)
+
+
+ANSWER 10:-
+find_common_elements = lambda list1, list2: list(filter(lambda x: x in list2, list1))
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+result = find_common_elements(list1, list2)
+print(result)
+
+
+ANSWER 11:-
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+number = 5
+result = factorial(number)
+print(result)
+
+
+ANSWER 12:-
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+number = 6
+result = fibonacci(number)
+print(result)
+
+
+
+ANSWER 13:-
+def sum_list(lst):
+    if len(lst) == 0:
+        return 0
+    else:
+        return lst[0] + sum_list(lst[1:])
+numbers = [1, 2, 3, 4, 5]
+result = sum_list(numbers)
+print(result)
+
+
+
+ANSWER 14:-
+def isPalindrome(string): 
+    if len(string) < 1: 
+        return True 
+    else: 
+        if string[0] == string[-1]: 
+            return isPalindrome(string[1:-1]) 
+        else: 
+            return False 
+ 
+str1 = input("Enter string : ") 
+ 
+if(isPalindrome(str1)==True): 
+   print("The string is a palindrome.") 
+else: 
+   print("The string is not a palindrome.") 
+
+
+ANSWER 15:-
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+number1 = 36
+number2 = 48
+result = gcd(number1, number2)
+print(result)
+
+
